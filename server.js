@@ -2,8 +2,13 @@ const express = require('express');
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const connect = require('./utils/db');
+const mongoose = require('mongoose');
 
 const PORT = process.env.PORT || 5000;
+
+// DB CONNECTION
+connect();
 
 // PERSON OBJECT
 const person = [
